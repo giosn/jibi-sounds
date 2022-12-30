@@ -1,8 +1,40 @@
+.page {
+    background: #efeff4
+}
+
+.md .navbar-inner {
+    justify-content: center !important;
+}
+
+.navbar {
+    height: 80px;
+    .title {
+        font-family: "Poppins Bold";
+        font-size: 10vw;
+    }
+}
+
+.navbar-bg {
+    background-color: rgba(#efeff4, var(--f7-bars-translucent-opacity)) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(var(--f7-bars-translucent-blur));
+    backdrop-filter: saturate(180%) blur(var(--f7-bars-translucent-blur));
+}
+
+.block {
+    margin-top: 32px;
+}
+
 .row > div {
     padding: 12px;
 }
+
 .button {
     height: calc(50vw - 48px);
+    font-family: "Poppins Medium";
+    font-size: 5vw;
+    font-weight: bold;
+    text-transform: none;
     line-height: normal;
     white-space: break-spaces;
+    border-radius: 5vw;
 }

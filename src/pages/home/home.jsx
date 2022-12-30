@@ -15,7 +15,7 @@ const HomePage = () => (
     <Page name="home">
 
         {/* Top Navbar */}
-        <Navbar>
+        <Navbar noShadow noHairline>
             <NavTitle>Jibi Sounds</NavTitle>
         </Navbar>
 
@@ -28,6 +28,7 @@ const HomePage = () => (
                             fill
                             raised
                             large
+                            style={r.style}
                             onClick={r.play()}>
                             {r.name}
                         </Button>
