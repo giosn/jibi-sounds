@@ -4,7 +4,12 @@ import {
     Navbar,
     NavTitle,
     Block,
+    Row,
+    Col,
+    Button
 } from 'framework7-react';
+import { recordings } from './recordings';
+import './home.scss';
 
 const HomePage = () => (
     <Page name="home">
@@ -16,6 +21,19 @@ const HomePage = () => (
 
         {/* Page content */}
         <Block>
+            <Row>
+                {recordings.map((r, i) => {
+                    return <Col key={i} width="50">
+                        <Button
+                            fill
+                            raised
+                            large
+                            onClick={r.play()}>
+                            {r.name}
+                        </Button>
+                    </Col>
+                })}
+            </Row>
         </Block>
 
     </Page>
