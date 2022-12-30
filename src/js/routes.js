@@ -1,5 +1,5 @@
 
-import HomePage from '../pages/home.jsx';
+import HomePage from '../pages/home/home.jsx';
 
 var routes = [
     {

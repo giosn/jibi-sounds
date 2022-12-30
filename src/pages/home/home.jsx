@@ -3,7 +3,7 @@ import {
     Page,
     Navbar,
     NavTitle,
-    Block
+    Block,
 } from 'framework7-react';
 
 const HomePage = () => (
@@ -16,7 +16,6 @@ const HomePage = () => (
 
         {/* Page content */}
         <Block>
-            <p>Here is your blank Framework7 app. Let's see what we have here.</p>
         </Block>
 
     </Page>
