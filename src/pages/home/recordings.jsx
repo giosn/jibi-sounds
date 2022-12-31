@@ -1,10 +1,26 @@
 import useSound from 'use-sound';
+import aa_aa_aah from './../../assets/recordings/aa_aa_aah.mp3'
+import ah_ah_aaay from './../../assets/recordings/ah_ah_aaay.mp3'
+import ah_jijo from './../../assets/recordings/ah_jijo.mp3'
+import amazing from './../../assets/recordings/amazing.mp3'
+import callate_pues from './../../assets/recordings/callate_pues.mp3'
+import estas_bien_cabron from './../../assets/recordings/estas_bien_cabron.mp3'
+import fausto1 from './../../assets/recordings/fausto1.mp3'
+import fausto2 from './../../assets/recordings/fausto2.mp3'
+import igh from './../../assets/recordings/igh.mp3'
+import le_encanta from './../../assets/recordings/le_encanta.mp3'
+import llego_el_pan from './../../assets/recordings/llego_el_pan.mp3'
+import mato from './../../assets/recordings/mato.mp3'
+import queee from './../../assets/recordings/queee.mp3'
+import que_onda_pa from './../../assets/recordings/que_onda_pa.mp3'
+import que_pendejo from './../../assets/recordings/que_pendejo.mp3'
+import que_raro from './../../assets/recordings/que_raro.mp3'
 
 export const recordings = [
     {
         name: 'Aa..aa..aah',
         play: () => {
-            const [play] = useSound('../../assets/recordings/aa_aa_aah.mp3');
+            const [play] = useSound(aa_aa_aah);
             return play;
         },
         style: {
@@ -14,7 +30,7 @@ export const recordings = [
     {
         name: '¡Ah ah aaay!',
         play: () => {
-            const [play] = useSound('../../assets/recordings/ah_ah_aaay.mp3');
+            const [play] = useSound(ah_ah_aaay);
             return play;
         },
         style: {
@@ -24,7 +40,7 @@ export const recordings = [
     {
         name: '¡Ah jijo!',
         play: () => {
-            const [play] = useSound('../../assets/recordings/ah_jijo.mp3');
+            const [play] = useSound(ah_jijo);
             return play;
         },
         style: {
@@ -34,7 +50,7 @@ export const recordings = [
     {
         name: 'Amazing',
         play: () => {
-            const [play] = useSound('../../assets/recordings/amazing.mp3');
+            const [play] = useSound(amazing);
             return play;
         },
         style: {
@@ -44,7 +60,7 @@ export const recordings = [
     {
         name: 'Cállate pues',
         play: () => {
-            const [play] = useSound('../../assets/recordings/callate_pues.mp3');
+            const [play] = useSound(callate_pues);
             return play;
         },
         style: {
@@ -54,7 +70,7 @@ export const recordings = [
     {
         name: 'Estás bien cabrón',
         play: () => {
-            const [play] = useSound('../../assets/recordings/estas_bien_cabron.mp3');
+            const [play] = useSound(estas_bien_cabron);
             return play;
         },
         style: {
@@ -64,7 +80,7 @@ export const recordings = [
     {
         name: 'Fausto',
         play: () => {
-            const [play] = useSound('../../assets/recordings/fausto1.mp3');
+            const [play] = useSound(fausto1);
             return play;
         },
         style: {
@@ -74,7 +90,7 @@ export const recordings = [
     {
         name: '¡Fausto!',
         play: () => {
-            const [play] = useSound('../../assets/recordings/fausto2.mp3');
+            const [play] = useSound(fausto2);
             return play;
         },
         style: {
@@ -84,7 +100,7 @@ export const recordings = [
     {
         name: 'Igh',
         play: () => {
-            const [play] = useSound('../../assets/recordings/igh.mp3');
+            const [play] = useSound(igh);
             return play;
         },
         style: {
@@ -94,7 +110,7 @@ export const recordings = [
     {
         name: 'Le encanta',
         play: () => {
-            const [play] = useSound('../../assets/recordings/le_encanta.mp3');
+            const [play] = useSound(le_encanta);
             return play;
         },
         style: {
@@ -104,7 +120,7 @@ export const recordings = [
     {
         name: '¡Llegó el pan!',
         play: () => {
-            const [play] = useSound('../../assets/recordings/llego_el_pan.mp3');
+            const [play] = useSound(llego_el_pan);
             return play;
         },
         style: {
@@ -114,7 +130,7 @@ export const recordings = [
     {
         name: 'Mato',
         play: () => {
-            const [play] = useSound('../../assets/recordings/mato.mp3');
+            const [play] = useSound(mato);
             return play;
         },
         style: {
@@ -124,7 +140,7 @@ export const recordings = [
     {
         name: '¿Queeé?',
         play: () => {
-            const [play] = useSound('../../assets/recordings/queee.mp3');
+            const [play] = useSound(queee);
             return play;
         },
         style: {
@@ -134,7 +150,7 @@ export const recordings = [
     {
         name: '¿Qué onda pa?',
         play: () => {
-            const [play] = useSound('../../assets/recordings/que_onda_pa.mp3');
+            const [play] = useSound(que_onda_pa);
             return play;
         },
         style: {
@@ -144,7 +160,7 @@ export const recordings = [
     {
         name: '¡Que pendejo!',
         play: () => {
-            const [play] = useSound('../../assets/recordings/que_pendejo.mp3');
+            const [play] = useSound(que_pendejo);
             return play;
         },
         style: {
@@ -154,7 +170,7 @@ export const recordings = [
     {
         name: 'Que raro',
         play: () => {
-            const [play] = useSound('../../assets/recordings/que_raro.mp3');
+            const [play] = useSound(que_raro);
             return play;
         },
         style: {
