@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Jibi Sounds</string>
+    <string name="title_activity_main">Jibi Sounds</string>
+    <string name="package_name">com.giox.jibisounds</string>
+    <string name="custom_url_scheme">com.giox.jibisounds</string>
+</resources>
