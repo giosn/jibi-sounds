@@ -25,7 +25,10 @@ const HomePage = () => {
         <Page name="home" dark={isDark}>
 
             {/* Top Navbar */}
-            <Navbar noShadow noHairline>
+            <Navbar
+                noShadow
+                noHairline
+                dark={isDark}>
                 <NavTitle>Jibi Sounds</NavTitle>
                 <Button
                     round
