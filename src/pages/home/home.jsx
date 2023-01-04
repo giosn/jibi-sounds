@@ -10,15 +10,20 @@ import {
 } from 'framework7-react';
 import { recordings } from './recordings';
 import './home.scss';
+import { StatusBar, Style } from '@capacitor/status-bar';
 
 const HomePage = () => {
 
     const theme = localStorage.getItem('theme');
     const initialIsDark = theme == 'dark';
+    StatusBar.setStyle({style: initialIsDark ? Style.Dark : Style.Light});
+    StatusBar.setBackgroundColor({color: initialIsDark ? '#2c3e50' : '#ecf0f1'});
     let [isDark, setIsDark] = React.useState(initialIsDark);
     const handleClick = () => {
         localStorage.setItem('theme', isDark ? 'light' : 'dark');
         setIsDark(!isDark);
+        StatusBar.setStyle({style: isDark ? Style.Dark : Style.Light});
+        StatusBar.setBackgroundColor({color: isDark ? '#2c3e50' : '#ecf0f1'});
     };
 
     return (
