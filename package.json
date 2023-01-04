@@ -21,6 +21,7 @@
     "Samsung >= 12"
   ],
   "dependencies": {
+    "@awesome-cordova-plugins/theme-detection": "^6.3.0",
     "@capacitor/android": "^4.6.1",
     "@capacitor/app": "^4.1.1",
     "@capacitor/assets": "^2.0.4",
@@ -30,6 +31,7 @@
     "@capacitor/keyboard": "^4.1.0",
     "@capacitor/splash-screen": "^4.1.2",
     "@capacitor/status-bar": "^4.1.1",
+    "cordova-plugin-theme-detection": "^1.3.0",
     "dom7": "^4.0.4",
     "framework7": "^7.1.1",
     "framework7-icons": "^5.0.5",
