@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Page,
     Navbar,
@@ -10,35 +10,59 @@ import {
 } from 'framework7-react';
 import { recordings } from './recordings';
 import './home.scss';
+import { Device } from '@capacitor/device';
 import { StatusBar, Style } from '@capacitor/status-bar';
+import { ThemeDetection } from '@awesome-cordova-plugins/theme-detection';
 
 const HomePage = () => {
 
-    const theme = localStorage.getItem('theme');
-    const initialIsDark = theme == 'dark';
-    StatusBar.setStyle({style: initialIsDark ? Style.Dark : Style.Light});
-    StatusBar.setBackgroundColor({color: initialIsDark ? '#2c3e50' : '#ecf0f1'});
-    let [isDark, setIsDark] = React.useState(initialIsDark);
-    const handleClick = () => {
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        setIsDark(!isDark);
-        StatusBar.setStyle({style: isDark ? Style.Dark : Style.Light});
-        StatusBar.setBackgroundColor({color: isDark ? '#2c3e50' : '#ecf0f1'});
-    };
+    const [platformIsWeb, setPlatformIsWeb] = useState();
+    const [themeDetectionIsAvailable, setThemeDetectionIsAvailable] = useState();
+    const [isDarkModeEnabled, setIsDarkModeEnabled] = useState();
+
+    useEffect(() => {
+        const getPlatformIsWeb = async () => {
+            const platformIsWeb = await Device.getInfo().then(deviceInfo => deviceInfo.platform == 'web');
+            setPlatformIsWeb(platformIsWeb);
+        };
+        getPlatformIsWeb();
+
+        if (!platformIsWeb) {
+            const getThemeDetectionIsAvailable = async () => {
+                const themeDetectionIsAvailable = await ThemeDetection.isAvailable().then(r => r.value).catch(e => false);
+                setThemeDetectionIsAvailable(themeDetectionIsAvailable);
+            };
+            getThemeDetectionIsAvailable();
+        }
+
+        if (themeDetectionIsAvailable) {
+            const getIsDarkModeEnabled = async () => {
+                const isDarkModeEnabled = await ThemeDetection.isDarkModeEnabled().then(r => r.value).catch(e => false);
+                setIsDarkModeEnabled(isDarkModeEnabled);
+            };
+            getIsDarkModeEnabled();
+        }
+    });
+
+    console.log(platformIsWeb, themeDetectionIsAvailable, isDarkModeEnabled);
+
+    if (!platformIsWeb) {
+        StatusBar.setStyle({style: isDarkModeEnabled ? Style.Dark : Style.Light}).catch(e => e);
+        StatusBar.setBackgroundColor({color: isDarkModeEnabled ? '#2c3e50' : '#ecf0f1'}).catch(e => e);
+    }
 
     return (
-        <Page name="home" dark={isDark}>
+        <Page name="home" dark={isDarkModeEnabled}>
 
             {/* Top Navbar */}
             <Navbar
                 noShadow
                 noHairline
-                dark={isDark}>
+                dark={isDarkModeEnabled}>
                 <NavTitle>Jibi Sounds</NavTitle>
                 <Button
                     round
-                    iconMaterial={isDark ? "dark_mode" : "light_mode"}
-                    onClick={() => handleClick()}>
+                    iconMaterial={isDarkModeEnabled ? "dark_mode" : "light_mode"}>
                 </Button>
             </Navbar>
 
