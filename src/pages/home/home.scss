@@ -23,6 +23,10 @@
     }
 }
 
+.ios .navbar {
+    height: 96px;
+}
+
 .navbar-bg {
     background-color: rgba(#ecf0f1, var(--f7-bars-translucent-opacity)) !important;
     -webkit-backdrop-filter: saturate(180%) blur(var(--f7-bars-translucent-blur));
@@ -31,6 +35,10 @@
 
 .block {
     margin-top: 32px;
+}
+
+.ios .block {
+    margin-top: 48px;
 }
 
 .row {
