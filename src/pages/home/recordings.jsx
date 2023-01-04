@@ -1,20 +1,22 @@
 import useSound from 'use-sound';
-import aa_aa_aah from './../../assets/recordings/aa_aa_aah.mp3'
-import ah_ah_aaay from './../../assets/recordings/ah_ah_aaay.mp3'
-import ah_jijo from './../../assets/recordings/ah_jijo.mp3'
-import amazing from './../../assets/recordings/amazing.mp3'
-import callate_pues from './../../assets/recordings/callate_pues.mp3'
-import estas_bien_cabron from './../../assets/recordings/estas_bien_cabron.mp3'
-import fausto1 from './../../assets/recordings/fausto1.mp3'
-import fausto2 from './../../assets/recordings/fausto2.mp3'
-import igh from './../../assets/recordings/igh.mp3'
-import le_encanta from './../../assets/recordings/le_encanta.mp3'
-import llego_el_pan from './../../assets/recordings/llego_el_pan.mp3'
-import mato from './../../assets/recordings/mato.mp3'
-import queee from './../../assets/recordings/queee.mp3'
-import que_onda_pa from './../../assets/recordings/que_onda_pa.mp3'
-import que_pendejo from './../../assets/recordings/que_pendejo.mp3'
-import que_raro from './../../assets/recordings/que_raro.mp3'
+import aa_aa_aah from './../../assets/recordings/aa_aa_aah.mp3';
+import ah_ah_aaay from './../../assets/recordings/ah_ah_aaay.mp3';
+import ah_jijo from './../../assets/recordings/ah_jijo.mp3';
+import amazing from './../../assets/recordings/amazing.mp3';
+import callate_pues from './../../assets/recordings/callate_pues.mp3';
+import estas_bien_cabron from './../../assets/recordings/estas_bien_cabron.mp3';
+import fausto1 from './../../assets/recordings/fausto1.mp3';
+import fausto2 from './../../assets/recordings/fausto2.mp3';
+import igh from './../../assets/recordings/igh.mp3';
+import le_encanta from './../../assets/recordings/le_encanta.mp3';
+import llego_el_pan from './../../assets/recordings/llego_el_pan.mp3';
+import mato from './../../assets/recordings/mato.mp3';
+import queee from './../../assets/recordings/queee.mp3';
+import que_onda_pa from './../../assets/recordings/que_onda_pa.mp3';
+import que_pendejo from './../../assets/recordings/que_pendejo.mp3';
+import que_raro from './../../assets/recordings/que_raro.mp3';
+import sigues from './../../assets/recordings/sigues.mp3';
+import sigues_y_no_te_cansas from './../../assets/recordings/sigues_y_no_te_cansas.mp3';
 
 export const recordings = [
     {
@@ -174,7 +176,27 @@ export const recordings = [
             return play;
         },
         style: {
-            background: 'linear-gradient(to right, #ff9966, #ff5e62)'
+            background: 'linear-gradient(222deg, #7cc8f7, #5e6aff)'
+        }
+    },
+    {
+        name: '¿Sigues?',
+        play: () => {
+            const [play] = useSound(sigues);
+            return play;
+        },
+        style: {
+            background: 'linear-gradient(45deg, #ad5399, #cc8eff)'
+        }
+    },
+    {
+        name: '¿Sigues y no te cansas?',
+        play: () => {
+            const [play] = useSound(sigues_y_no_te_cansas);
+            return play;
+        },
+        style: {
+            background: 'linear-gradient(60deg, #ffde32, #ffa451)'
         }
     }
 ];
