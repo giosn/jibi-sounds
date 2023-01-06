@@ -19,7 +19,7 @@ const MyApp = () => {
             theme: 'auto', // Automatic theme detection
 
 
-            id: 'com.giox.jibisounds', // App bundle ID
+            id: 'com.gio.jibisounds', // App bundle ID
             // App store
             store: store,
             // App routes

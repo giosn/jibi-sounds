@@ -11,7 +11,7 @@ Framework7 app created with following options:
     "capacitor"
   ],
   "name": "Jibi Sounds",
-  "pkg": "com.giox.jibisounds",
+  "pkg": "com.gio.jibisounds",
   "framework": "react",
   "template": "single-view",
   "cssPreProcessor": "scss",

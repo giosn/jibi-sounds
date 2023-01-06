@@ -1,4 +1,4 @@
-package com.giox.jibisounds;
+package com.gio.jibisounds;
 
 import com.getcapacitor.BridgeActivity;
 
