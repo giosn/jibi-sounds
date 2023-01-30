@@ -38,15 +38,21 @@ const HomePage = () => {
                 <Button
                     round
                     iconMaterial={isDark ? "dark_mode" : "light_mode"}
+                    className="theme-button"
                     onClick={() => handleClick()}>
                 </Button>
             </Navbar>
 
             {/* Page content */}
             <Block>
-                <Row>
+                <Row className="justify-content-center">
                     {recordings.map((r, i) => {
-                        return <Col key={i} width="50">
+                        return <Col
+                            key={i}
+                            width="50"
+                            small="33"
+                            large="25"
+                            xlarge="20">
                             <Button
                                 fill
                                 raised
